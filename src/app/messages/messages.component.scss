@@ -1,3 +1,5 @@
+@import "../heroes/heroes.component.scss";
+
 /* MessagesComponent에 적용되는 CSS 스타일 */
 h2 {
   color: #ff6b6b;
@@ -15,23 +17,37 @@ button {
 }
 
 button.clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 12px 8px;
+  width: 224px;
+  height: 36px;
+  font-size: 24px;
   font-family: Arial;
-  background-color: #eee;
+  background-color: #fab1a0;
+  color: #fff;
   border: none;
-  padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
   cursor: hand;
+  @include transition-100(100ms);
+  &:hover {
+    background-color: #ff7675;
+    font-size: 32px;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    margin: 0 0 12px 16px;
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+  }
 }
-button:hover {
-  background-color: #cfd8dc;
-}
-button:disabled {
-  background-color: #eee;
-  color: #aaa;
-  cursor: auto;
-}
-button.clear {
-  color: #333;
-  margin-bottom: 12px;
+
+.message {
+  width: 224px;
+  text-align: center;
 }
