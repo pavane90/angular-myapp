@@ -1,4 +1,7 @@
-/* HeroesComponent's private CSS styles */
+@mixin transition-100($ms) {
+  transition: all $ms ease-in-out;
+}
+
 .selected {
   background-color: #cfd8dc !important;
   color: white;
@@ -18,19 +21,19 @@
   padding: 0.3em 0;
   height: 1.6em;
   border-radius: 4px;
-  transition: all 100ms linear;
+  @include transition-100(100ms);
 }
 .heroes li.selected:hover {
   background-color: #bbd8dc !important;
   color: white;
   left: 6px;
-  transition: all 100ms linear;
+  @include transition-100(100ms);
 }
 .heroes li:hover {
   color: #607d8b;
   background-color: #ddd;
   left: 6px;
-  transition: all 100ms linear;
+  @include transition-100(100ms);
 }
 .heroes .text {
   position: relative;
