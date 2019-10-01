@@ -6,6 +6,7 @@ import { HeroesComponent } from "./heroes/heroes.component";
 import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
 
 const routes: Routes = [
+  //라우팅 주소
   { path: "", redirectTo: "/dashboard", pathMatch: "full" },
   { path: "dashboard", component: DashboardComponent },
   { path: "detail/:id", component: HeroDetailComponent },
